@@ -1,8 +1,6 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Home  from './Components/Home';
-
-
 import NavBar from './Components/NavBar';
 import { Routes,Route } from 'react-router-dom';
 
@@ -11,7 +9,10 @@ function App() {
 
     <div className="App">
         <NavBar/>
-        <Home/>
+        <Routes>
+          <Route path ='/' element= {<Home/>}></Route>
+        </Routes>
+
     </div>
   );
 }
