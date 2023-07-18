@@ -8,7 +8,7 @@ function Movie(props) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  console.log(`https://image.tmdb.org/t/p/w500${props.data.release_date}`)
+  // console.log(`https://image.tmdb.org/t/p/w500${props.data.release_date}`)
   return (<>
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w500${props.data.release_date}`} alt={props.title} />
