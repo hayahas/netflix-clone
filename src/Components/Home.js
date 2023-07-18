@@ -7,14 +7,14 @@ function Home() {
     async function getTrendingMovies() {
         let url = process.env.REACT_APP_SERVER_URL;
         let response = await fetch(`${url}/trending`);
-        console.log(response)
+        // console.log(response)
         let movies = await response.json();
         setData(movies);
     }
     useEffect(() => {
         getTrendingMovies()
     }, [])
-    console.log(data);
+    // console.log(data);
     return (
         <>
             {
