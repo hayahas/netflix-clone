@@ -18,10 +18,10 @@ function Movie(props) {
           Movie ID : {props.data.id}
         </Card.Text>
         <Button onClick={handleShow} variant="primary">Show Modal</Button>
-        <Button variant="primary">Add to Favorite</Button>
+        
       </Card.Body>
     </Card>
-    <ModalMovie modalData={props.data} handleShow={handleShow} handleClose={handleClose} show={show} />
+    <ModalMovie commentHandler = {props.commentHandler} modalData={props.data} handleShow={handleShow} handleClose={handleClose} show={show} />
   </>
   );
 }
