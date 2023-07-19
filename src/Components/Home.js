@@ -14,11 +14,22 @@ function Home() {
     useEffect(() => {
         getTrendingMovies()
     }, [])
-    // console.log(data);
+
+    //recieve from modal
+    function commentHandler(newMovie, id) {
+        data.map((movie) => {
+            if (movie.id == id) {
+                movie.comment == newMovie.commentHandler;
+                return movie;
+            } else {
+                return movie;
+            }
+        })
+    }
     return (
         <>
             {
-                <MovieList data={data} />
+                <MovieList commentHandler={commentHandler} data={data} />
             }
         </>
     )
